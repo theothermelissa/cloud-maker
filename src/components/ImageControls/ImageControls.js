@@ -27,10 +27,10 @@ const sizeFormatter = value => {
   return `${value}px`;
 };
 
-const convertFromFraction = value => {
-  console.log("Converted from fraction: ", value*100);
-  return value*100;
-}
+// const convertFromFraction = value => {
+//   console.log("Converted from fraction: ", value*100);
+//   return value*100;
+// }
 
 const ImageControlsContainer = styled.div`
   box-sizing: border-box;

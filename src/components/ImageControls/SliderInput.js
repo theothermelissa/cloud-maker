@@ -58,10 +58,8 @@ const SliderInput = (props) => {
   } = props;
 
   const changeSetting = (value) => {
-    // console.log("Change value to: ", value);
     return (
       handleChange(name, property, value)
-      // handleChange(imageName, property, value)
     )
   };
 
@@ -76,8 +74,7 @@ const SliderInput = (props) => {
           min={min}
           max={max}
           tipFormatter={formatter}
-          slider-rail-background-color={mycoral}
-           />
+          slider-rail-background-color={mycoral} />
         {/* <Icon type={secondIcon} /> */}
       </SliderBox>
     </Tray>

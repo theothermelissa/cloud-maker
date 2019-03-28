@@ -1,4 +1,4 @@
-import styled, { keyframes} from "styled-components";
+import { keyframes} from "styled-components";
 
 export const Extraslow = "250s";
 export const Slow = "200s";

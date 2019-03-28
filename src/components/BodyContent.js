@@ -4,6 +4,7 @@ import smoke from "../images/smoke.png";
 import { spin } from "./Spins";
 import colors from "./ColorButtons/ColorsForButtons";
 import ControlPanel from './ControlPanel';
+import { Button } from 'antd';
 
 const { charcoal } = colors;
 
@@ -17,6 +18,30 @@ const convertToFraction = value => {
   return value/100;
 };
 
+const ExplanationBox = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  flex: 1;
+  width: 40vw;
+  font-size: .9em;
+  height: 100%;
+  `;
+
+const Explaination = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  `;
+
+  const GetStartedButton = styled(Button)`
+    width: 200px;
+    height: 50px;
+    margin: 10px;
+  `;
+
 const BodyContainer = styled.div`
   box-sizing: border-box;
   left: 0;
@@ -24,12 +49,13 @@ const BodyContainer = styled.div`
   display: flex;
   flex-direction: column;
   background-color: white;
+  min-height:100%;
   `;
 
 const SmokeBackground = styled.div`
   position: relative;
   box-sizing: border-box;
-  height: 55vh;
+  height: 50vh;
   width: 100vw;
   overflow: hidden;
   background: ${props => props.backgroundColor};
@@ -55,6 +81,7 @@ class BodyContent extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      showControls: false,
       background: {
         color: charcoal,
       },
@@ -110,7 +137,22 @@ class BodyContent extends Component {
         <Image {...this.state.front} src={smoke} alt="Smoke" />
         <Image {...this.state.lower} src={smoke} alt="Smoke" />
       </SmokeBackground>
-      <ControlPanel {...this.state} handleChange={this.handleChange} />
+      { this.state.showControls ? (
+        <ControlPanel {...this.state} handleChange={this.handleChange} />
+      ) : (
+        <ExplanationBox>
+          <Explaination>
+            <p>
+              Video? Nope. 
+            </p>
+            <p>
+              It's four layers of a single image, styled and animated with simple CSS. And by changing the 
+              background color, speed, opacity, size, and positioning, you can achieve vastly different effects.
+            </p>
+          </Explaination>
+          <GetStartedButton type="primary" onClick={() => this.setState({showControls: true})}>Let's Play</GetStartedButton>
+        </ExplanationBox>
+      )}
     </BodyContainer>
   )}
 
