@@ -4,7 +4,7 @@ import SliderInput from './SliderInput';
 // import { Radio } from 'antd';
 import DirectionButtons from './DirectionButtons';
 import EaseButtons from './EaseButtons';
-import { mycoral, mylightestgray } from './Colors';
+import { mycoral, mylightestgray } from '../Colors';
 
 
 const MAX_SPEED = 300;
@@ -33,8 +33,10 @@ const convertFromFraction = value => {
 }
 
 const ImageControlsContainer = styled.div`
+  box-sizing: border-box;
   display: flex;
   flex-flow: row wrap;
+  position: relative;
   min-height: 200px;
   width: 100%;
   align-items: start;
@@ -82,8 +84,7 @@ const ImageControls = (props) => {
         value={layerSettings.speed}
         formatter={speedFormatter}
         firstIcon="up"
-        secondIcon="down"
-         />
+        secondIcon="down" />
       <SliderInput 
         name={imageName} 
         property="opacity"
@@ -94,8 +95,7 @@ const ImageControls = (props) => {
         value={layerSettings.opacity}
         formatter={opacityFormatter}
         firstIcon="up"
-        secondIcon="down"
-         />
+        secondIcon="down" />
       <SliderInput 
         name={imageName} 
         property="size"
@@ -106,8 +106,7 @@ const ImageControls = (props) => {
         value={layerSettings.size}
         formatter={sizeFormatter}
         firstIcon="up"
-        secondIcon="down"
-         />
+        secondIcon="down" />
       <SliderInput 
         name={imageName} 
         property="leftPosition"
@@ -118,8 +117,7 @@ const ImageControls = (props) => {
         value={layerSettings.leftPosition}
         formatter={sizeFormatter}
         firstIcon="up"
-        secondIcon="down"
-         />
+        secondIcon="down" />
       <SliderInput 
         name={imageName} 
         property="topPosition"
@@ -130,8 +128,7 @@ const ImageControls = (props) => {
         value={layerSettings.topPosition}
         formatter={sizeFormatter}
         firstIcon="up"
-        secondIcon="down"
-         />
+        secondIcon="down" />
       <EaseButtons 
         name={imageName} 
         animationTimingFunction={layerSettings.animationTimingFunction} 

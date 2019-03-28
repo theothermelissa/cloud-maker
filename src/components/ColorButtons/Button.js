@@ -11,9 +11,12 @@ const ColorName = styled.h2`
   `;
 
 const ColorButton = styled.button`
-  margin: 3px;
-  min-width: 13vw;
-  padding: 3px;
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+  margin: 3px 0px;
+  /* min-width: 13vw; */
+  /* padding: 3px; */
   border: 5px solid white;
   border-radius: 15px;
   background-color: ${ ({color}) => color };

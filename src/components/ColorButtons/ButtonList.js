@@ -1,16 +1,18 @@
 import React from "react";
 import styled from "styled-components";
 import Button from './Button';
-import colors from "../ColorsForButtons";
+import colors from "./ColorsForButtons";
 import _ from "lodash";
 
 const ButtonContainer = styled.span`
   display: flex;
   flex-flow: row wrap;
   width: 100%;
-  margin: 10px;
-  align-items: center;
-  justify-content: space-around;
+  position: relative;
+  margin: 5px;
+  /* align-items: stretch;
+  align-content: stretch;
+  justify-content: stretch; */
   `;
 
 const ButtonList = ({ handleChange, imageName }) => {

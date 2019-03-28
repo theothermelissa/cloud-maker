@@ -1,4 +1,4 @@
-import { mycoral, mygold, myroyal, mycharcoal, myemerald, myviolet } from './Colors';
+import { mycoral, mygold, myroyal, mycharcoal, myemerald, myviolet } from '../Colors';
 
 export default {
   // lightestgray: '#EFEFEF',

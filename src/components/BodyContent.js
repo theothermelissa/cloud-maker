@@ -1,11 +1,9 @@
 import React, { Component } from "react";
-import styled, { keyframes } from "styled-components";
+import styled from "styled-components";
 import smoke from "../images/smoke.png";
-import { spin, spinLeft, spinRight, Extraslow, Slow, Medium, Fast, Extrafast } from "./Spins";
-import ButtonList from "./ColorButtons/ButtonList";
-import colors from "./ColorsForButtons";
+import { spin } from "./Spins";
+import colors from "./ColorButtons/ColorsForButtons";
 import ControlPanel from './ControlPanel';
-import ImageControls from './ImageControls';
 // import { assign } from "lodash";
 
 const { lightestgray, mediumgray, charcoal, mint, darkmint, coral, darkcoral, cream } = colors;
@@ -30,7 +28,7 @@ const BodyContainer = styled.div`
   right: 0;
   display: flex;
   flex-direction: column;
-  width: 100%;
+  /* width: 100%; */
   height: 100vh;
   /* align-items: center; */
   background-color: white;
@@ -38,7 +36,7 @@ const BodyContainer = styled.div`
 
 const SmokeBackground = styled.div`
   position: relative;
-  /* box-sizing: border-box; */
+  box-sizing: border-box;
   height: 55vh;
   width: 100vw;
   overflow: hidden;
@@ -125,10 +123,6 @@ class BodyContent extends Component {
   )}
 
   handleChange = (imageName, property, value) => {
-    // console.log("imageName: ", imageName);
-    // console.log("property: ", property);
-    // console.log("value: ", value);
-    // console.log("Change It To: ", value);
     this.setState(previousState => ({
       ...previousState,
       [imageName]: {
@@ -137,7 +131,7 @@ class BodyContent extends Component {
       }
     })
     )
-    console.log( "current state: ", this.state);  
+    // console.log( "current state: ", this.state);  
   }
 };
 
