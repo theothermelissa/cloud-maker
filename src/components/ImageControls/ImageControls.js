@@ -37,15 +37,16 @@ const ImageControlsContainer = styled.div`
   display: flex;
   flex-flow: row wrap;
   position: relative;
-  min-height: 200px;
+  /* min-height: 200px; */
   width: 100%;
   align-items: start;
   justify-content: space-around;
-  margin: 0px 7px;
+  margin: 0px 10px;
   padding: 5px 15px;
   /* background-color: ${mylightestgray}; */
   /* border-radius: 7px; */
   `;
+
 const ControlsTitle = styled.h2`
   color: ${mycoral};
   width: 100%;
@@ -69,11 +70,6 @@ const ImageControls = (props) => {
   return (
     <ImageControlsContainer >
       <ControlsTitle >{imageName}</ControlsTitle>
-      <DirectionButtons 
-        name={imageName} 
-        direction={layerSettings.direction} 
-        setDirection={(directionValue) => 
-        handleChange(imageName, "direction", directionValue)} />
       <SliderInput 
         name={imageName} 
         property="speed"
@@ -129,11 +125,16 @@ const ImageControls = (props) => {
         formatter={sizeFormatter}
         firstIcon="up"
         secondIcon="down" />
+      <DirectionButtons 
+        name={imageName} 
+        direction={layerSettings.direction} 
+        setDirection={(directionValue) => 
+        handleChange(imageName, "direction", directionValue)} />
       <EaseButtons 
         name={imageName} 
         animationTimingFunction={layerSettings.animationTimingFunction} 
         setEase={(ease) => 
-        handleChange(imageName, "animationTimingFunction", ease)} />
+          handleChange(imageName, "animationTimingFunction", ease)} />
     </ImageControlsContainer>
   );
 };

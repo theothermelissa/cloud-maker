@@ -4,33 +4,25 @@ import smoke from "../images/smoke.png";
 import { spin } from "./Spins";
 import colors from "./ColorButtons/ColorsForButtons";
 import ControlPanel from './ControlPanel';
-// import { assign } from "lodash";
 
-const { lightestgray, mediumgray, charcoal, mint, darkmint, coral, darkcoral, cream } = colors;
+const { charcoal } = colors;
 
 const speedInSeconds = (speed) => {
-  // console.log("Speed in seconds: ", `${speed}s`);
   return `${speed}s`
 };
 const sizeInPixels = (size) => {
-  // console.log("Size in pixels: ", `${size}px`);
   return `${size}px`
 };
 const convertToFraction = value => {
-  // console.log("Converted to fraction: ", value/100);
   return value/100;
 };
 
 const BodyContainer = styled.div`
-  /* margin: -5vw; */
   box-sizing: border-box;
   left: 0;
   right: 0;
   display: flex;
   flex-direction: column;
-  /* width: 100%; */
-  height: 100vh;
-  /* align-items: center; */
   background-color: white;
   `;
 

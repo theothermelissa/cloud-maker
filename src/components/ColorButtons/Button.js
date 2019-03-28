@@ -1,11 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import { mylightestgray } from '../Colors';
 
 const ColorName = styled.h2`
   color: white;
-  /* font-size: .9em; */
-  /* font-weight: bold; */
   text-transform: uppercase;
   margin: 0;
   `;
@@ -15,12 +12,9 @@ const ColorButton = styled.button`
   flex-grow: 1;
   justify-content: center;
   margin: 3px 0px;
-  /* min-width: 13vw; */
-  /* padding: 3px; */
   border: 5px solid white;
   border-radius: 15px;
   background-color: ${ ({color}) => color };
-  /* background-color: ${ ({color}) => color }; */
   `;
 
 

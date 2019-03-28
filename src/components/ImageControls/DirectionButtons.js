@@ -1,23 +1,30 @@
 import React from "react";
 import styled from 'styled-components';
 import { Radio } from 'antd';
+import { mylightestgray } from '../Colors';
 
 const RadioGroup = Radio.Group;
 
-export default class DirectionButtons extends React.Component {
-  constructor(props) {
-    super(props);
-    // console.log("Props passed to DirectionButtons: ", props)
-    // console.log();
+const DirectionButtonsContainer = styled.div`
+  display: flex;
+  flex-flow: row wrap;
+  position: relative;
+  width: 100%;
+  align-items: start;
+  border-bottom: 1px solid ${mylightestgray};
+  padding: 5px 0px;
+  `;
 
-  }
+export default class DirectionButtons extends React.Component {
   render() {
     const { name, setDirection, direction } = this.props;
     return (
-      <RadioGroup name={name} onChange={(event) => setDirection(event.target.value)} value={direction}>
-        <Radio value={"left"}>Left</Radio>
-        <Radio value={"right"}>Right</Radio>
-      </RadioGroup>
+      <DirectionButtonsContainer>
+        <RadioGroup name={name} onChange={(event) => setDirection(event.target.value)} value={direction}>
+          <Radio color={mylightestgray} value={"left"}>Spin Left</Radio>
+          <Radio color={mylightestgray} value={"right"}>Spin Right</Radio>
+        </RadioGroup>
+      </DirectionButtonsContainer>
     );
   }
 };

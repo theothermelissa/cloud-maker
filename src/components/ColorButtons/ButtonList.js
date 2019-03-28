@@ -4,12 +4,12 @@ import Button from './Button';
 import colors from "./ColorsForButtons";
 import _ from "lodash";
 
-const ButtonContainer = styled.span`
+const ButtonContainer = styled.div`
   display: flex;
   flex-flow: row wrap;
   width: 100%;
   position: relative;
-  margin: 5px;
+  /* margin: 5px; */
   /* align-items: stretch;
   align-content: stretch;
   justify-content: stretch; */

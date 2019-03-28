@@ -1,8 +1,7 @@
 import React from "react";
 import { Slider, Icon } from 'antd';
 import styled from 'styled-components';
-import { mycoral, mylightestgray } from '../Colors';
-import "antd/dist/antd.css";
+import { mycoral, mycharcoal } from '../Colors';
 
 const Tray = styled.div`
   box-sizing: border-box;
@@ -15,7 +14,7 @@ const Tray = styled.div`
 
 const SliderName = styled.p`
   /* font-size: 1.5em; */
-  color: ${mylightestgray};
+  color: ${mycharcoal};
   `;
 
 const SliderBox = styled.div`
