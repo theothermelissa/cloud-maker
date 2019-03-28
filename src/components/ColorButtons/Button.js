@@ -5,18 +5,18 @@ const ColorName = styled.h2`
   color: white;
   text-transform: uppercase;
   margin: 0;
-  `;
+  font-size: 14px;
+`;
 
 const ColorButton = styled.button`
   display: flex;
   flex-grow: 1;
+  height: 32px;
   justify-content: center;
   margin: 3px 0px;
-  border: 5px solid white;
-  border-radius: 15px;
+  border-radius: 5px;
   background-color: ${ ({color}) => color };
-  `;
-
+`;
 
 const Button = ({ name, hexValue, setBackgroundColor }) => (
     <ColorButton color={hexValue} onClick={() => setBackgroundColor(hexValue)} >

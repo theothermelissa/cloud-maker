@@ -10,16 +10,13 @@ const Tray = styled.div`
   width: 100%;
   align-items: center;
   justify-content: space-between;
-  `;
+`;
 
 const SliderName = styled.p`
-  /* font-size: 1.5em; */
   color: ${mycharcoal};
-  `;
+`;
 
 const SliderBox = styled.div`
-  /* display: flex;
-  flex-direction: row; */
   position: relative;
   width: 90%;
   padding: 0px 20px;
@@ -30,7 +27,6 @@ const SliderBox = styled.div`
     width: 16px;
     height: 16px;
     line-height: 1;
-    /* font-size: 16px; */
     color: white;
     &:first-child {
       left: 0;

@@ -25,8 +25,8 @@ export const spin = (direction) => {
     case "left":
       result = spinLeft;
       break;
-    // default:
-    //   result = spinRight;
+    default: 
+      result = spinLeft;
   }
   return result;
 };

@@ -13,7 +13,7 @@ const DirectionButtonsContainer = styled.div`
   align-items: start;
   border-bottom: 1px solid ${mylightestgray};
   padding: 5px 0px;
-  `;
+`;
 
 export default class DirectionButtons extends React.Component {
   render() {

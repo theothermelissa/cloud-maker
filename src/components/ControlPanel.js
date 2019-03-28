@@ -10,13 +10,13 @@ const ControlsContainer = styled.div`
   width: 100%;
   align-items: start;
   justify-content: center;
-  `;
+`;
 
 const ImageBox = styled.div`
   display: flex;
   flex-direction: row;
   width: 100%;
-  `;
+`;
 
 const ControlPanel = (props) => {
   return (

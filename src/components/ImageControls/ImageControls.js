@@ -1,11 +1,9 @@
 import React from "react";
 import styled from 'styled-components';
 import SliderInput from './SliderInput';
-// import { Radio } from 'antd';
 import DirectionButtons from './DirectionButtons';
 import EaseButtons from './EaseButtons';
-import { mycoral, mylightestgray } from '../Colors';
-
+import { mynavy, mylightestgray } from '../Colors';
 
 const MAX_SPEED = 300;
 const MIN_SPEED = 15;
@@ -15,7 +13,6 @@ const MIN_OPACITY = 0;
 const MAX_OPACITY = 100;
 const MIN_POSITION = -900;
 const MAX_POSITION = 900;
-
 
 const speedFormatter = value => {
   return `${value}s`;
@@ -27,43 +24,28 @@ const sizeFormatter = value => {
   return `${value}px`;
 };
 
-// const convertFromFraction = value => {
-//   console.log("Converted from fraction: ", value*100);
-//   return value*100;
-// }
-
 const ImageControlsContainer = styled.div`
   box-sizing: border-box;
   display: flex;
   flex-flow: row wrap;
   position: relative;
-  /* min-height: 200px; */
   width: 100%;
   align-items: start;
   justify-content: space-around;
-  margin: 0px 10px;
+  margin: 10px;
   padding: 5px 15px;
-  /* background-color: ${mylightestgray}; */
-  /* border-radius: 7px; */
-  `;
+  background-color: ${mylightestgray};
+  border-radius: 5px;
+`;
 
 const ControlsTitle = styled.h2`
-  color: ${mycoral};
   width: 100%;
-  /* color: ${mycoral}; */
-  `;
-
-// handleChange,
-// imageName,
-// max,
-// min,
-// defaultValue,
-// formatter,
-// firstIcon,
-// secondIcon 
+  color: ${mynavy};
+  font-size: 18px;
+  font-weight: bold;
+`;
 
 const ImageControls = (props) => {
-  // console.log("Props passed to ImageControls: ", props);
   const { handleChange, imageName } = props;
   const layerSettings = props[imageName];
 
@@ -138,7 +120,5 @@ const ImageControls = (props) => {
     </ImageControlsContainer>
   );
 };
-
-// ReactDOM.render(<ImageControls min={0} max={20} />, mountNode);
 
 export default ImageControls;

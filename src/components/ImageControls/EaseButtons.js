@@ -2,7 +2,6 @@ import React from "react";
 import styled from 'styled-components';
 import { Radio } from 'antd';
 
-
 const RadioGroup = Radio.Group;
 
 const EaseButtonsContainer = styled.div`
@@ -12,7 +11,7 @@ const EaseButtonsContainer = styled.div`
   width: 100%;
   align-items: start;
   padding: 5px 0px;
-  `;
+`;
 
 export default class EaseButtons extends React.Component {
   render() {

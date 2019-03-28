@@ -6,7 +6,7 @@ import colors from "./ColorButtons/ColorsForButtons";
 import ControlPanel from './ControlPanel';
 import { Button } from 'antd';
 
-const { charcoal } = colors;
+const { royal } = colors;
 
 const speedInSeconds = (speed) => {
   return `${speed}s`
@@ -26,21 +26,19 @@ const ExplanationBox = styled.div`
   align-self: center;
   flex: 1;
   width: 40vw;
-  font-size: .9em;
   height: 100%;
-  `;
+`;
 
 const Explaination = styled.div`
   display: flex;
   flex-direction: column;
   align-items: start;
-  `;
+`;
 
   const GetStartedButton = styled(Button)`
     width: 200px;
-    height: 50px;
     margin: 10px;
-  `;
+`;
 
 const BodyContainer = styled.div`
   box-sizing: border-box;
@@ -50,7 +48,7 @@ const BodyContainer = styled.div`
   flex-direction: column;
   background-color: white;
   min-height:100%;
-  `;
+`;
 
 const SmokeBackground = styled.div`
   position: relative;
@@ -59,10 +57,9 @@ const SmokeBackground = styled.div`
   width: 100vw;
   overflow: hidden;
   background: ${props => props.backgroundColor};
-  `;
+`;
 
 const Image = styled.img`
-  name: ${props => props.imageName};
   position: absolute;  
   left: ${props => sizeInPixels(props.leftPosition)};
   top: ${props => sizeInPixels(props.topPosition)};
@@ -75,7 +72,7 @@ const Image = styled.img`
     ${ props => speedInSeconds(props.speed) } 
     ${props => props.animationTimingFunction} 
     infinite;
-  `;
+`;
 
 class BodyContent extends Component {
   constructor(props) {
@@ -83,7 +80,7 @@ class BodyContent extends Component {
     this.state = {
       showControls: false,
       background: {
-        color: charcoal,
+        color: royal,
       },
       lower: {  
         imageName: "lower",
@@ -164,10 +161,7 @@ class BodyContent extends Component {
           [property]: value,
       }
     })
-    )
-    // console.log( "current state: ", this.state);  
-  }
+  )}
 };
-
 
 export default BodyContent;
